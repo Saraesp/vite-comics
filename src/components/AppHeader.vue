@@ -79,7 +79,7 @@
 <style lang="scss">
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
-    
+
     header{
         text-align: center;
         display: flex;
@@ -100,6 +100,10 @@
                 font-family: 'Roboto', sans-serif;
                 font-weight: 500;
                 color: $primary;
+
+                &:active, &:hover{
+                    color: $secondary;
+                }
             }
     }
 
