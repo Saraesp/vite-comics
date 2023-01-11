@@ -1,29 +1,110 @@
 <script>
     export default {
-            
+        data(){
+            return{
+                menu: [
+                    {
+                      label: 'CHARACTERS',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'COMICS',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'MOVIES',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'TV',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'GAMES',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'COLLECTIOBLES',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'VIDEOS',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'FANS',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'NEWS',
+                      url: '#',
+                      active: false
+                    },
+                    {
+                      label: 'SHOP',
+                      url: '#',
+                      active: false
+                    }
+                ]
+            }
+        }
     }
 </script>
 
 <template lang="">
     <header>
         <a href="">
-            <img src="../assets/image/dc-logo.png" alt="">
+            <img class="logo" src="../assets/image/dc-logo.png" alt="">
         </a>
+        <nav>
             <ul>
-                <li>CHARACTERS</li>
-                <li>COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
+                <li v-for="(item, index) in menu" :key="index">
+                    <a :href="item.url" :class="item.active ? 'active' : ''">
+                        {{item.label}}
+                    </a>
+                </li>
             </ul>
+        </nav>
     </header>
 </template>
 
-<style lang="">
+<style lang="scss">
+    @use '../styles/partials/variables' as *;
+    @use '../styles/partials/mixins' as *;
     
+    header{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+
+        ul{
+            list-style: none;
+            margin: 2rem 1rem;
+            @include center;
+        }
+
+            li a{
+                display: inline-block;
+                padding: 1rem;
+                text-decoration: none;
+                font-size: 12px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                color: $primary;
+            }
+    }
+
+    .logo{
+        width: 50px;
+        margin-right: 100px;
+    }
 </style>
