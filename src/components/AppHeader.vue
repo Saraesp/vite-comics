@@ -62,7 +62,7 @@
 <template lang="">
     <header class="container">
         <a href="">
-            <img class="logo" src="../assets/image/dc-logo.png" alt="">
+            <img class="logo" src="/image/dc-logo.png" alt="">
         </a>
         <nav>
             <ul>
