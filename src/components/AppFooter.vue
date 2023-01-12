@@ -22,33 +22,32 @@ export default {
             </div>
 
             <div class="background-image">
-                <h4></h4>
-                <nav>
-                    <ul>
-                        <li><a href=""></a></li>
-                    </ul>
-                </nav>
+                <div>
+                    <h4></h4>
+                    <nav>
+                        <ul>
+                            
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4></h4>
+                    <nav>
+                        <ul>
+                            
+                        </ul>
+                    </nav>
+                </div>
     
-                <h4></h4>
-                <nav>
-                    <ul>
-                        <li><a href=""></a></li>
-                    </ul>
-                </nav>
-    
-                <h4></h4>
-                <nav>
-                    <ul>
-                        <li><a href=""></a></li>
-                    </ul>
-                </nav>
-    
-                <h4></h4>
-                <nav>
-                    <ul>
-                        <li><a href=""></a></li>
-                    </ul>
-                </nav>
+                <div>
+                    <h4></h4>
+                    <nav>
+                        <ul>
+                            
+                        </ul>
+                    </nav>
+                </div>
     
             </div>
     

@@ -11,7 +11,7 @@
                     {
                       label: 'COMICS',
                       url: '#',
-                      active: false
+                      active: true
                     },
                     {
                       label: 'MOVIES',
@@ -60,14 +60,14 @@
 </script>
 
 <template lang="">
-    <header>
+    <header class="container">
         <a href="">
             <img class="logo" src="../assets/image/dc-logo.png" alt="">
         </a>
         <nav>
             <ul>
-                <li v-for="(item, index) in menu" :key="index">
-                    <a :href="item.url" :class="item.active ? 'active' : ''">
+                <li v-for="(item, index) in menu" :key="index" :class="item.active ? 'active' : ''">
+                    <a :href="item.url">
                         {{item.label}}
                     </a>
                 </li>
@@ -81,34 +81,55 @@
     @use '../styles/partials/mixins' as *;
 
     header{
-        text-align: center;
-        display: flex;
-        justify-content: center;
+        height: 150px;
+        @include center;
+        justify-content: space-between;
         margin: 10px;
 
-        ul{
-            list-style: none;
-            margin: 2rem 1rem;
+        nav{
             @include center;
+            height: 100%;
+            
+            ul{
+                height: 100%;
+                list-style: none;
+                margin: 2rem 1rem;
+                @include center;
+
+                li{
+                    height: 100%;
+                    padding: 1rem;
+                    font-size: 13px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    @include center;
+                    
+                    &.active {
+                        border-bottom: $border-bottom;
+                            
+                        a{
+                            color: $color-blue;
+                        }
+                        
+                    }
+
+                    &:hover{
+                        border-bottom: $border-bottom;
+                    }
+
+                    a:hover{
+                        color: $color-blue;
+                    }
+            }
+            
+            }
         }
 
-            li a{
-                display: inline-block;
-                padding: 1rem;
-                text-decoration: none;
-                font-size: 12px;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 500;
-                color: $primary;
 
-                &:active, &:hover{
-                    color: $secondary;
-                }
-            }
     }
 
     .logo{
-        width: 50px;
+        width: 90px;
         margin-right: 100px;
     }
 </style>
