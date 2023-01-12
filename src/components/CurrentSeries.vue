@@ -13,7 +13,7 @@
 <template lang="">
     <div class="card">
         <div class="carde-image">
-            <img :src="thumb.src" alt="">
+            <img :src="series.thumb" alt="">
         </div>
         <div class="card-title">
             {{series.series}}
@@ -23,8 +23,17 @@
 <style lang="scss">
 
     .card{
-        width: 25%;
-        border: 1px solid black;
+        width: 15%;
+        color: white;
+        
+        .card-image{
+
+        }
+        .card-title{
+            font-size: 13px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
     }
     
 </style>
