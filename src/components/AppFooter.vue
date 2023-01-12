@@ -108,7 +108,14 @@ export default {
             </div>
     
             <div class="background-black">
+                <div class="container">
+                    <button>SING-UP NOW&#33;</button>
 
+                    <div class="social-link">
+                       <h3>FOLLOW US</h3>
+
+                    </div>
+                </div>
             </div>
     </footer>
 </template>
@@ -118,7 +125,6 @@ export default {
     @use '../styles/partials/mixins' as *;
 
     .background-blue{
-        height: 150px;
         background-color: $color-blue;
         
         .cols{
@@ -145,7 +151,7 @@ export default {
             display: flex;
             .footer-sx{
                 display: flex;
-                margin: 20px;
+                margin: 20px 0;
             }
 
             .col{
@@ -169,6 +175,33 @@ export default {
                 }
             }
         }
+    }
+
+    .background-black{
+        background-color: rgb(50, 49, 49);
+        padding: 30px 0;
+
+        button{
+            padding: 10px;
+            background-color: transparent;
+            border: 2px solid $color-blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        .social-link{
+            
+
+            h3{
+                color: $color-blue;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 800;
+    
+            }
+        }
+       
+
+        
     }
 
 
